@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite thread-count="10" name="MyApp" parallel="tests">
+
+
+  <test name="Test: - Base Test1">
+		<parameter name="targetEnvironment" value="IOSDevice" />
+		<parameter name="targetEnvironment" value="AndroidDevice" />
+		<parameter name="configId" value="1001" />
+		<parameter name="configId" value="1003" />
+		
+		<parameter name="browser" value="chrome" />
+		<parameter name="userID" value="ramanna.satyaph@gmail.com" />
+		<parameter name="url" value="http://www.google.com" />
+		
+		<classes>
+			<class name="AaVinPack.BaseClass">
+				<methods>
+					<include name="testNGDemo" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+		
+	 		
+</suite> <!-- Suite -->
